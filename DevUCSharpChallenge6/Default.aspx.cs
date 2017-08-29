@@ -30,8 +30,8 @@ namespace DevUCSharpChallenge6
             
             double[] electionsRigged = (double[])ViewState["ElectionsRigged"];
             int newLength = electionsRigged.Length + 1;
-            int newIndex = electionsRigged.GetUpperBound(0);
             Array.Resize(ref electionsRigged, newLength);
+            int newIndex = electionsRigged.GetUpperBound(0);
             electionsRigged[newIndex] = int.Parse(electionsRiggedTextBox.Text);
 
             double[] actsOfSubterfuge = (double[])ViewState["ActsOfSubterfuge"];
@@ -46,7 +46,7 @@ namespace DevUCSharpChallenge6
 
             resultLabel.Text = String.Format("Total Elections Rigged: {0}<br ?>" +
                 "Average Acts of Subterfuge per Asset: {1}<br />" +
-                "(Last Asset you added: {2})", electionsRigged.Sum(), actsOfSubterfuge.Average(), assetNames[0]);
+                "(Last Asset you added: {2})", electionsRigged.Sum(), actsOfSubterfuge.Average(), assetNames[newIndex]);
         }
     }
 }
