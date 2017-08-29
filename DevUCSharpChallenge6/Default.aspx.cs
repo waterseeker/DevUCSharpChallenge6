@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevUCSharpChallenge6.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,7 +14,8 @@ namespace DevUCSharpChallenge6
         protected void Page_Load(object sender, EventArgs e)
         {
             //need to store an array of agents with name, # of elections rigged, and # of acts of subterfuge preformed
-            agent[] 
+            Asset[] assets = new Asset[0];
+            ViewState.Add("Assets", assets);
         }
 
         protected void addAssetButton_Click(object sender, EventArgs e)

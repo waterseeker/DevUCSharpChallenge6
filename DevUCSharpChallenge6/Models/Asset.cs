@@ -30,6 +30,7 @@ namespace DevUCSharpChallenge6.Models
             get { return _assetName; }
             set { _assetName = value; }
         }
-
+        
     }
+
 }
