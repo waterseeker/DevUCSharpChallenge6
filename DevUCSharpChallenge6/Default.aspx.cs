@@ -33,16 +33,17 @@ namespace DevUCSharpChallenge6
             Array.Resize(ref electionsRigged, newLength);
             int newIndex = electionsRigged.GetUpperBound(0);
             electionsRigged[newIndex] = int.Parse(electionsRiggedTextBox.Text);
+            ViewState["ElectionsRigged"] = electionsRigged;
 
             double[] actsOfSubterfuge = (double[])ViewState["ActsOfSubterfuge"];
             Array.Resize(ref actsOfSubterfuge, newLength);
             actsOfSubterfuge[newIndex] = int.Parse(actsOfSubterfugeTextBox.Text);
-
+            ViewState["ActsOfSubterfuge"] = actsOfSubterfuge;
 
             string[] assetNames = (string[])ViewState["AssetNames"];
             Array.Resize(ref assetNames, newLength);
             assetNames[newIndex] = assetNameTextBox.Text;
-
+            ViewState["AssetNames"] = assetNames;
 
             resultLabel.Text = String.Format("Total Elections Rigged: {0}<br ?>" +
                 "Average Acts of Subterfuge per Asset: {1}<br />" +
